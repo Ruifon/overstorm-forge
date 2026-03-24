@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { getProduct, getRelatedProducts } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
 import { motion } from "framer-motion";
+import { useCart } from "@/contexts/CartContext";
+import { toast } from "sonner";
 
 export default function ProductPage() {
   const { id } = useParams();
