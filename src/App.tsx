@@ -26,7 +26,7 @@ const App = () => (
       <CartProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename="/overstorm-forge">
+        <BrowserRouter>
           <ScrollToTop />
           <Header />
           <CartDrawer />
