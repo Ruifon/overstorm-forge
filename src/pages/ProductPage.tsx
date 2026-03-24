@@ -11,11 +11,18 @@ import { toast } from "sonner";
 export default function ProductPage() {
   const { id } = useParams();
   const product = getProduct(id || "");
+  const { addItem } = useCart();
   const [view, setView] = useState<"front" | "back">("front");
   const [selectedColor, setSelectedColor] = useState(0);
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const [cep, setCep] = useState("");
   const [sizeGuideOpen, setSizeGuideOpen] = useState(false);
+
+  const handleAddToCart = () => {
+    if (!product || !selectedSize) return;
+    addItem(product, selectedSize, selectedColor);
+    toast.success(`${product.name} adicionado ao carrinho!`);
+  };
 
   if (!product) {
     return (
