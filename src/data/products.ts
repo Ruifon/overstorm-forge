@@ -1,3 +1,9 @@
+import productHoodieFront from "@/assets/product-hoodie-front.jpg";
+import productHoodieBack from "@/assets/product-hoodie-back.jpg";
+import product2 from "@/assets/product-2.jpg";
+import product3 from "@/assets/product-3.jpg";
+import product4 from "@/assets/product-4.jpg";
+
 export interface Product {
   id: string;
   name: string;
@@ -35,7 +41,7 @@ export const products: Product[] = [
     name: "PHANTOM HOODIE",
     price: 389.9,
     originalPrice: 449.9,
-    images: { front: "/src/assets/product-hoodie-front.jpg", back: "/src/assets/product-hoodie-back.jpg" },
+    images: { front: productHoodieFront, back: productHoodieBack },
     colors: [
       { name: "Void Black", hex: "#0A0A0A" },
       { name: "Storm Grey", hex: "#2A2A2A" },
@@ -48,11 +54,7 @@ export const products: Product[] = [
     unitsLeft: 12,
     soldOut: false,
     description: "Hoodie oversized com tecnologia DryStorm™. Capuz estruturado com ajuste em cordão refletivo. Estampa exclusiva em serigrafia HD.",
-    fabric: {
-      weight: "420g/m²",
-      composition: "100% Algodão Pima Premium",
-      treatment: "DryStorm™ Anti-odor + UV Protection 50+",
-    },
+    fabric: { weight: "420g/m²", composition: "100% Algodão Pima Premium", treatment: "DryStorm™ Anti-odor + UV Protection 50+" },
     artist: "KZMA",
     conceptStory: "Inspirado na dualidade entre o visível e o invisível no espaço urbano. O artista KZMA traduz frequências sonoras da cidade em padrões geométricos que só revelam sua complexidade de perto.",
     sizeGuide: [
@@ -72,7 +74,7 @@ export const products: Product[] = [
     id: "ovs-cropped-glitch",
     name: "GLITCH CROPPED",
     price: 279.9,
-    images: { front: "/src/assets/product-2.jpg", back: "/src/assets/product-2.jpg" },
+    images: { front: product2, back: product2 },
     colors: [
       { name: "Void Black", hex: "#0A0A0A" },
       { name: "Cyber White", hex: "#F0F0F0" },
@@ -99,7 +101,7 @@ export const products: Product[] = [
     id: "ovs-cargo-shadow",
     name: "SHADOW CARGO",
     price: 459.9,
-    images: { front: "/src/assets/product-3.jpg", back: "/src/assets/product-3.jpg" },
+    images: { front: product3, back: product3 },
     colors: [
       { name: "Void Black", hex: "#0A0A0A" },
       { name: "Tactical Green", hex: "#1A3A1A" },
@@ -124,7 +126,7 @@ export const products: Product[] = [
     id: "ovs-tee-signal",
     name: "SIGNAL TEE",
     price: 189.9,
-    images: { front: "/src/assets/product-4.jpg", back: "/src/assets/product-4.jpg" },
+    images: { front: product4, back: product4 },
     colors: [
       { name: "Void Black", hex: "#0A0A0A" },
       { name: "Off White", hex: "#F5F0E8" },
