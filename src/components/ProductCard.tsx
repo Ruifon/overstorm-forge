@@ -23,6 +23,11 @@ export default function ProductCard({ product }: { product: Product }) {
           <span className="bg-primary text-primary-foreground text-[10px] font-mono tracking-wider px-2 py-1 rounded-sm">
             {product.drop}
           </span>
+          {product.limitedEdition && (
+            <span className="bg-destructive text-destructive-foreground text-[10px] font-mono tracking-wider px-2 py-1 rounded-sm">
+              LIMITED
+            </span>
+          )}
         </div>
         <button
           className="absolute top-3 right-3 p-2 bg-background/50 backdrop-blur-sm rounded opacity-0 group-hover:opacity-100 transition-opacity"
