@@ -25,6 +25,7 @@ export interface Product {
   };
   artist?: string;
   conceptStory?: string;
+  limitedEdition?: boolean;
   sizeGuide: { size: string; chest: string; length: string; shoulder: string }[];
   reviews: {
     name: string;
@@ -150,6 +151,153 @@ export const products: Product[] = [
     reviews: [
       { name: "Thiago B.", rating: 5, comment: "Melhor camiseta que já comprei. O algodão é surreal.", date: "2024-03-18" },
       { name: "Julia F.", rating: 4, comment: "Adorei a estampa, tecido muito gostoso.", date: "2024-03-05" },
+    ],
+  },
+  // DROP 03 — Limited Edition & Almost Sold Out
+  {
+    id: "ovs-bomber-eclipse",
+    name: "ECLIPSE BOMBER",
+    price: 549.9,
+    originalPrice: 649.9,
+    images: { front: product3, back: product3 },
+    colors: [
+      { name: "Void Black", hex: "#0A0A0A" },
+      { name: "Midnight Navy", hex: "#0D1B2A" },
+    ],
+    sizes: ["P", "M", "G", "GG"],
+    drop: "DROP 03",
+    category: "Jaquetas",
+    gender: "unissex",
+    unitsLeft: 3,
+    soldOut: false,
+    limitedEdition: true,
+    description: "Bomber jacket com forro térmico e detalhes refletivos. Edição limitada a 50 unidades com numeração individual.",
+    fabric: { weight: "380g/m²", composition: "100% Nylon Ripstop / Forro Poliéster", treatment: "WaterShield™ DWR + Thermo-Layer" },
+    artist: "VØLT",
+    conceptStory: "A jaqueta Eclipse foi desenhada em colaboração com o artista VØLT, explorando a dualidade luz e sombra nas paisagens noturnas urbanas. Cada peça é numerada individualmente.",
+    sizeGuide: [
+      { size: "P", chest: "112cm", length: "68cm", shoulder: "52cm" },
+      { size: "M", chest: "118cm", length: "70cm", shoulder: "54cm" },
+      { size: "G", chest: "124cm", length: "72cm", shoulder: "56cm" },
+      { size: "GG", chest: "130cm", length: "74cm", shoulder: "58cm" },
+    ],
+    reviews: [
+      { name: "Rafael T.", rating: 5, comment: "Peça de colecionador. Os detalhes refletivos são insanos.", date: "2024-01-20" },
+      { name: "Camila S.", rating: 5, comment: "Comprei a #023 e já recebi proposta pra revender. Não largo!", date: "2024-01-15" },
+    ],
+  },
+  {
+    id: "ovs-hoodie-static",
+    name: "STATIC HOODIE",
+    price: 419.9,
+    images: { front: productHoodieFront, back: productHoodieBack },
+    colors: [
+      { name: "Carbon", hex: "#1C1C1C" },
+      { name: "Electric Blue", hex: "#0066FF" },
+    ],
+    sizes: ["P", "M", "G", "GG"],
+    drop: "DROP 03",
+    category: "Hoodies",
+    gender: "masculino",
+    unitsLeft: 7,
+    soldOut: false,
+    limitedEdition: true,
+    description: "Hoodie premium com estampa all-over em sublimação. Edição limitada Drop 03 com certificado de autenticidade.",
+    fabric: { weight: "440g/m²", composition: "100% Algodão Orgânico", treatment: "DryStorm™ + Sublimação Full Print" },
+    sizeGuide: [
+      { size: "P", chest: "112cm", length: "73cm", shoulder: "55cm" },
+      { size: "M", chest: "118cm", length: "75cm", shoulder: "57cm" },
+      { size: "G", chest: "124cm", length: "77cm", shoulder: "59cm" },
+      { size: "GG", chest: "130cm", length: "79cm", shoulder: "61cm" },
+    ],
+    reviews: [
+      { name: "Diego F.", rating: 5, comment: "O azul elétrico é ainda mais bonito ao vivo. Qualidade surreal.", date: "2024-02-05" },
+    ],
+  },
+  {
+    id: "ovs-jogger-pulse",
+    name: "PULSE JOGGER",
+    price: 349.9,
+    originalPrice: 399.9,
+    images: { front: product3, back: product3 },
+    colors: [
+      { name: "Void Black", hex: "#0A0A0A" },
+      { name: "Ash Grey", hex: "#3A3A3A" },
+    ],
+    sizes: ["P", "M", "G", "GG"],
+    drop: "DROP 03",
+    category: "Calças",
+    gender: "unissex",
+    unitsLeft: 4,
+    soldOut: false,
+    description: "Jogger técnico com bolsos laterais com zíper e barra ajustável. Cós com cordão emborrachado e detalhes em silicone.",
+    fabric: { weight: "300g/m²", composition: "92% Algodão / 8% Elastano", treatment: "SoftTouch™ + Acabamento Peach Skin" },
+    sizeGuide: [
+      { size: "P", chest: "-", length: "100cm", shoulder: "-" },
+      { size: "M", chest: "-", length: "102cm", shoulder: "-" },
+      { size: "G", chest: "-", length: "104cm", shoulder: "-" },
+      { size: "GG", chest: "-", length: "106cm", shoulder: "-" },
+    ],
+    reviews: [
+      { name: "Fernanda L.", rating: 4, comment: "Super confortável. Uso pra treinar e pra sair.", date: "2024-01-28" },
+      { name: "Bruno M.", rating: 5, comment: "Melhor jogger que já tive. Tecido muito macio.", date: "2024-02-10" },
+    ],
+  },
+  {
+    id: "ovs-tee-cipher",
+    name: "CIPHER TEE",
+    price: 199.9,
+    images: { front: product4, back: product4 },
+    colors: [
+      { name: "Void Black", hex: "#0A0A0A" },
+      { name: "Bone", hex: "#E8E0D5" },
+    ],
+    sizes: ["P", "M", "G", "GG", "XGG"],
+    drop: "DROP 03",
+    category: "Camisetas",
+    gender: "unissex",
+    unitsLeft: 2,
+    soldOut: false,
+    limitedEdition: true,
+    description: "Camiseta edição limitada com estampa criptográfica em tinta termocrômica — muda de cor com o calor do corpo. Apenas 30 unidades produzidas.",
+    fabric: { weight: "250g/m²", composition: "100% Algodão Supima", treatment: "ThermoPrint™ + Enzyme Wash" },
+    artist: "N0X",
+    conceptStory: "O artista N0X codificou mensagens ocultas na estampa usando padrões de criptografia visual. Quando a tinta aquece com o corpo, revela frases escondidas que só o portador pode ler.",
+    sizeGuide: [
+      { size: "P", chest: "108cm", length: "72cm", shoulder: "52cm" },
+      { size: "M", chest: "114cm", length: "74cm", shoulder: "54cm" },
+      { size: "G", chest: "120cm", length: "76cm", shoulder: "56cm" },
+      { size: "GG", chest: "126cm", length: "78cm", shoulder: "58cm" },
+      { size: "XGG", chest: "132cm", length: "80cm", shoulder: "60cm" },
+    ],
+    reviews: [
+      { name: "Igor V.", rating: 5, comment: "A tinta termocrômica é real! Surpreendeu demais.", date: "2024-02-18" },
+      { name: "Letícia R.", rating: 5, comment: "Comprei a última M. Peça única, literalmente.", date: "2024-02-22" },
+    ],
+  },
+  {
+    id: "ovs-vest-grid",
+    name: "GRID VEST",
+    price: 329.9,
+    images: { front: product2, back: product2 },
+    colors: [
+      { name: "Void Black", hex: "#0A0A0A" },
+    ],
+    sizes: ["P", "M", "G"],
+    drop: "DROP 03",
+    category: "Coletes",
+    gender: "unissex",
+    unitsLeft: 0,
+    soldOut: true,
+    description: "Colete utilitário com 6 bolsos e fechamento em fivela. Tecido ripstop com tratamento impermeável.",
+    fabric: { weight: "260g/m²", composition: "100% Nylon Ripstop", treatment: "WaterShield™ DWR Coating" },
+    sizeGuide: [
+      { size: "P", chest: "104cm", length: "62cm", shoulder: "42cm" },
+      { size: "M", chest: "110cm", length: "64cm", shoulder: "44cm" },
+      { size: "G", chest: "116cm", length: "66cm", shoulder: "46cm" },
+    ],
+    reviews: [
+      { name: "Henrique A.", rating: 5, comment: "Esgotou rápido por um motivo. Peça absurda.", date: "2024-01-10" },
     ],
   },
 ];

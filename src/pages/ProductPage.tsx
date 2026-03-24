@@ -155,6 +155,7 @@ export default function ProductPage() {
               size="lg"
               className="flex-1"
               disabled={product.soldOut || !selectedSize}
+              onClick={handleAddToCart}
             >
               <ShoppingBag className="h-4 w-4" />
               {product.soldOut ? "ESGOTADO" : "ADICIONAR AO CARRINHO"}
