@@ -102,11 +102,13 @@ export default function Header() {
                 <User className="h-4 w-4" />
               </Button>
             </Link>
-            <Button variant="ghost" size="icon" className="relative">
+            <Button variant="ghost" size="icon" className="relative" onClick={() => setIsCartOpen(true)}>
               <ShoppingBag className="h-4 w-4" />
-              <span className="absolute -top-0.5 -right-0.5 bg-primary text-primary-foreground text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
-                0
-              </span>
+              {totalItems > 0 && (
+                <span className="absolute -top-0.5 -right-0.5 bg-primary text-primary-foreground text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                  {totalItems}
+                </span>
+              )}
             </Button>
             <Button variant="ghost" size="icon" className="lg:hidden" onClick={() => setMobileOpen(true)}>
               <Menu className="h-5 w-5" />
