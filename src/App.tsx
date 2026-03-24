@@ -21,7 +21,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/overstorm-forge">
         <Header />
         <main className="min-h-screen">
           <Routes>
