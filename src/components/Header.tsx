@@ -40,6 +40,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const location = useLocation();
+  const { totalItems, setIsCartOpen } = useCart();
 
   return (
     <>
